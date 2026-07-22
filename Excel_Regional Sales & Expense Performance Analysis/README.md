@@ -11,10 +11,14 @@ The main objective is to analyze **Regional Sales, Expenses, and Budget Variance
 
 ```text
 Raw Synthetic Data ➡️ Power Query (ETL & M-Code) ➡️ Power Pivot (Star Schema) ➡️ Dynamic Visuals & VBA ➡️ Executive Dashboard
+```
 
 1) ETL & Data Transformation: Importing multi-table raw data directly through the Excel Data Tab into Power Query. 
-
+<br>
+<br>
+<br>
 <img width="960" height="501" alt="ETL" src="https://github.com/user-attachments/assets/a1a12d56-021e-4996-840b-b21bde7ae3fd" />
+
 
 2) Custom Date Dimension: Creating a continuous 3-year Calendar table using custom M-Code.
 
