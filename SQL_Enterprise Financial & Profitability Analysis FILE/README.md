@@ -57,17 +57,22 @@ Calculated regional net profitability by comparing actual sales against operatio
 Used conditional logic to flag performance status as profit or loss.
 
 -- Region-wise Actual Revenue vs Expense & Profitability
-SELECT 
-    r.region,
-    s.revenue AS actual_revenue,
-    e.expense AS actual_expense,
-    (s.revenue - e.expense) AS profit_and_loss_EBITDA,
-    CASE 
-        WHEN s.revenue > e.expense THEN 'profit'
-        ELSE 'loss'
-    END AS statement
-FROM region_sales s
-JOIN region_expense e ON s.region = e.region;
+create view actual_revenue as
+with
+ region_sales as
+(select region,sum(sales_amount)as revenue from sales_data group by region),
+region_expense as
+(select region,sum(amount)as expense from expense_data group by region )
+select r. region, r. revenue, e.expense,
+case
+ when
+r.revenue>e.expense then r.revenue-e.expense
+else e.expense-r.revenue end as profit_and_loss_EBITDA,
+case
+when r.revenue>e.expense then 'profit'else'loss'end as statement
+from region_sales r
+ join region_expense e
+ on r.region = e.region;
 
 3️⃣ Budget vs. Actual Variance Analytics
 Analyzed performance targets by comparing budgeted revenue against actual revenue per region and per month.
@@ -83,18 +88,17 @@ Segmented customer performance across Corporate, Small Business, and Consumer gr
 
 SQL
 -- Top Customer in Each Region using Window Function
-WITH ranked_customers AS (
-    SELECT 
-        s.Region,
-        s.Customer_Name,
-        SUM(s.Sales_Amount) AS Revenue,
-        RANK() OVER (PARTITION BY s.Region ORDER BY SUM(s.Sales_Amount) DESC) AS rnk
+SELECT *
+FROM (
+    SELECT s.Region,
+           s.Customer_Name,
+           SUM(s.Sales_Amount) AS Revenue,
+           RANK() OVER (PARTITION BY s.Region ORDER BY SUM(s.Sales_Amount) DESC) AS rnk
     FROM Sales_Data s
     GROUP BY s.Region, s.Customer_Name
-)
-SELECT Region, Customer_Name, Revenue
-FROM ranked_customers
+) ranked
 WHERE rnk = 1;
+
 
 5️⃣ Time-Series & Month-over-Month (MoM) Growth Analysis (LAG())
 Computed cumulative running totals for revenue across consecutive years and months.
@@ -103,24 +107,20 @@ Employed the LAG() window function to calculate month-over-month revenue growth 
 
 SQL
 -- Month-over-Month Revenue Growth Percentage using LAG()
-WITH monthly_sales AS (
-    SELECT 
-        to_char(date, 'YYYY-MM') AS month,
-        SUM(sales_amount) AS revenue
-    FROM sales_data
-    GROUP BY to_char(date, 'YYYY-MM')
-)
-SELECT 
-    month,
-    revenue,
-    COALESCE(LAG(revenue) OVER (ORDER BY month), 0) AS previous_revenue,
-    (revenue - LAG(revenue) OVER (ORDER BY month)) AS difference_revenue,
-    ROUND(((revenue - LAG(revenue) OVER (ORDER BY month)) / LAG(revenue) OVER (ORDER BY month)) * 100, 2) || '%' AS percentage_growth
-FROM monthly_sales;
+	with 
+	monthly_sales as
+	(select to_char(date,'yyyy-mm')as month,sum(sales_amount)as revenue from sales_data group by month)
+	select month,revenue,coalesce(lag(revenue)over(order by month),0)as privious_revenue,
+	coalesce(revenue-lag(revenue)over(order by month),0)as differnce_revenue,
+	coalesce(round((revenue - lag(revenue)over(order by month))/(lag(revenue)over(order by month))*100,2 ),0)||'%'as percentage
+	from monthly_sales
+  order by month;
+
+
 💡 Key Business Insights Uncovered
 1) Top Revenue Driver: The West Region generated the highest total sales volume, while maintaining strong profit margins.
 
-2) MoM Trend: Strategic discount adjustments in mid-year led to a +40.87% revenue surge in Q3 compared to previous months.
+2) MoM Trend:  instantly see how the business is performing this month compared to the previous month.
 
 3) Customer Value: Top-ranked enterprise customers contributed significantly to overall revenue, highlighting key accounts       for VIP retention programs.
 
