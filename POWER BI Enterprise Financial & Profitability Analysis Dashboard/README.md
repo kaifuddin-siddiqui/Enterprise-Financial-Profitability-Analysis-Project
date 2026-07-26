@@ -10,40 +10,76 @@ The goal of this project is to analyze enterprise-wide business performance, inc
 ## 🏗️ Architecture & Technical Setup
 
 ### 1️⃣ Data Transformation (Power Query & M-Code)
-* **ETL Pipeline:** Imported structured multi-table financial data (Sales, Expenses, Budget, Customer).
-* **Custom M-Code Date Table:** Generated a clean, continuous Calendar table in Power Query using custom M-code:
+ **1) ETL Pipeline:** Imported structured multi-table financial data (Sales, Expenses, Budget, Customer).
+<br>
+<br>
+<img width="960" height="503" alt="PBIDesktop_vuu8E1ke1d" src="https://github.com/user-attachments/assets/67bba526-6fdc-4c59-9767-af47a979db6f" />
+<br>
+<br>
+<br>
+
+**2) Custom M-Code Date Table:** Generated a clean, continuous Calendar table in Power Query using custom M-code:
+
   ```m
-= {Number.From(#date(2023,1,1))..Number.From(#date(2025,12,1))}
 
-  
-Data Cleaning: updated data types, promoted headers, and verified foreign keys across dimension and fact tables.
+= {Number.From(#date(2023,1,1))..Number.From(#date(2025,12,1))} 
+```
+<br>
+<br>
+<br>
+<img width="960" height="503" alt="date bi " src="https://github.com/user-attachments/assets/18574464-e8de-4fa9-a8fe-c3e7756e44c7" />
+<br>
+<br>
+<br>
 
-2️⃣ Data Modeling (Star Schema)
-Designed a clean Star Schema Data Model to ensure fast report responsiveness and accurate filtering:
+**3) Data Cleaning:** updated data types, promoted headers, and verified foreign keys across dimension and fact tables.
+<br>
+<br>
+<br>
+<img width="960" height="505" alt="power query bi" src="https://github.com/user-attachments/assets/d1feae97-491f-4cb8-b413-fe296f4988e8" />
+<br>
+<br>
+<br>
 
-Fact Tables: Sales_Data, Expense_Data, Budget_Data
+### **2️⃣ Data Modeling (Star Schema)**
+<br>
+<br>
+1) Designed a clean Star Schema Data Model to ensure fast report responsiveness and accurate filtering:
 
-Dimension Tables: Customer_Data, Date_Table
+2) Fact Tables: Sales_Data, Expense_Data, Budget_Data
 
-Relationships: Configured 1-to-Many (1:*) single-direction relationships between dimension primary keys and fact foreign keys.
+3) Dimension Tables: Customer_Data, Date_Table
 
+4) Relationships: Configured 1-to-Many (1:*) single-direction relationships between dimension primary keys and fact foreign     keys.
+<br>
+<br>
+<br>
+<img width="960" height="469" alt="data modling" src="https://github.com/user-attachments/assets/d46477cb-44ab-4c9e-975a-b4405c3d3c80" />
+<br>
+<br>
+<br>
 🧮 Key DAX & Dynamic Features
-
+<br>
+<br>
+<br>
 1️⃣ Core Metrics (all_measures)
-
+<br>
+<br>
+<br>
+ ```m
 Total_sales: SUM(Sales_Data[Sales_Amount])
 
 Total Expenses: SUM(Expense_Data[Amount])
 
 Actual EBITDA:  [Total_sales]-[Total_expense]
-
-
+ ```
+ ```m
 EBITDA Margin %:
 
 DAX
 actual_EBITDA_MARGIN_% = 
 DIVIDE(([Total_sales]-[Total_expense]),[Total_sales],0)
-
+ ```
 Customer Lifetime & Repeat Metrics: Basic CLV, Repeat Customer Count, and Repeat Customer %.
 
 2️⃣ Field Parameters (Total_all)
