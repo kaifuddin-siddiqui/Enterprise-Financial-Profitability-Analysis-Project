@@ -52,7 +52,7 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
 
 * 🔗 **For full details & step-by-step documentation:**
   
-  👉 **[Click here to view Excel README](<./1-Regional Sales & Expense Performance Analysis/README.md>)**
+  👉 **[Click here to view Excel README](<./Excel_Regional Sales & Expense Performance Analysis/README.md>)**
 
 ---
 
