@@ -84,7 +84,7 @@ order by total_revenue desc;
 **Used conditional logic to flag performance status as profit or loss.**
 <br>
 <br>
-<img width="462" height="203" alt="jZF0aS3rzl" src="https://github.com/user-attachments/assets/8fd75dcd-9469-4245-bfbe-21918bc3aa8f" />
+<img width="462" height="203" alt="sql statement" src="https://github.com/user-attachments/assets/8bbe7356-a279-46d3-9452-a8638f69c558" />
 <br>
 <br>
 **Region-wise Actual Revenue vs Expense & Profitability**
@@ -116,14 +116,18 @@ from region_sales r
 **Calculated variance percentage and automatically flagged targets as achieve or miss_target.**
 <br>
 <br>
-<img width="702" height="210" alt="pgAdmin4_xlLIIZoqVi" src="https://github.com/user-attachments/assets/ef91722d-a16e-4452-a4d1-3896f1e6fdd3" />
-<br>
-<br>
-<img width="600" height="384" alt="pgAdmin4_PrRwrKk2YI" src="https://github.com/user-attachments/assets/a2ebc012-df12-417f-92b7-6bfbfccd6ee9" />
-
+<img width="702" height="210" alt="variencei" src="https://github.com/user-attachments/assets/0dab14ac-f842-4bc7-9be7-7b770fdc9a38" />
 <br>
 <br>
 
+---
+---
+<img width="600" height="384" alt="varinece" src="https://github.com/user-attachments/assets/45a5eb76-4f59-4399-9e20-49949aac0fa9" />
+<br>
+<br>
+
+---
+---
 ### **4️⃣ Customer Segmentation & Top Performer Ranking (RANK())**
 
 **Used RANK() OVER (PARTITION BY Region ORDER BY Revenue DESC) window function to identify the #1 Top Customer in each geographic region.**
@@ -150,10 +154,16 @@ WHERE rnk = 1;
 ```
 <br>
 <br>
-<img width="330" height="269" alt="jyKV9qPd4k" src="https://github.com/user-attachments/assets/d1b813cc-39e9-470e-9424-2867ba9fcfff" />
+
+**Segment_Revenue**
 <br>
 <br>
-<img width="195" height="211" alt="pgAdmin4_7f3UATAbzn" src="https://github.com/user-attachments/assets/f2948dbe-ad46-4588-aa25-d3aa8ee18b65" />
+<table>
+  <tr>
+ <td><img width="330" height="269" alt="jyKV9qPd4k" src="https://github.com/user-attachments/assets/d1b813cc-39e9-470e-9424-2867ba9fcfff" /></td>
+<td><img width="195" height="211" alt="pgAdmin4_7f3UATAbzn" src="https://github.com/user-attachments/assets/f2948dbe-ad46-4588-aa25-d3aa8ee18b65" /></td>
+  </tr>
+</table>
 <br>
 <br>
 <br>
@@ -187,7 +197,7 @@ SQL
 **1) Top Revenue Driver: The West Region generated the highest total sales volume, while maintaining strong profit margins.**
 <br>
 <br>
-<img width="462" height="203" alt="jZF0aS3rzl" src="https://github.com/user-attachments/assets/0c49c645-7566-4903-bd0c-9f1c49fe7353" />
+<img width="462" height="203" alt="sql statement" src="https://github.com/user-attachments/assets/fad65e52-ec4b-46b7-8379-e2b5aea51bae" />
 <br>
 <br>
 **2) MoM Trend:  instantly see how the business is performing this month compared to the previous month.**
