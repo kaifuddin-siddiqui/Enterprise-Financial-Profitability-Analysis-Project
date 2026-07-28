@@ -98,7 +98,10 @@ Converted the list into a structured table and set correct data types for seamle
 **To make the dashboard interactive for senior management, a VBA Macro was integrated and assigned to an on-screen button.**
 <br>
 <br>
+<img width="211" height="276" alt="Top 4" src="https://github.com/user-attachments/assets/387e8a3e-0119-41b9-a6d0-0058ab0ff25b" />
 <img width="159" height="226" alt="sales dashbord high light vba" src="https://github.com/user-attachments/assets/6b5dd683-7140-423c-847b-308cdf590d94" />
+<img width="203" height="202" alt="Top 6" src="https://github.com/user-attachments/assets/c5aebbb1-9503-484c-9911-de7df3255deb" />
+
 <br>
 <br>
 **Functionality**: Allows managers to dynamically filter and view Top N Customers by Revenue with a single click.
