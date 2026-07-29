@@ -258,3 +258,4 @@ Wse_EBITDA = what_if_messures[W_Total_sales]-what_if_messures[W_total_expense]
 <img width="705" height="431" alt="UB8l9UBoQH" src="https://github.com/user-attachments/assets/a4cf3817-18fa-411f-8ff9-86d1a4871288" />
 <br>
 <br>
+👉 **[Click here to view main README](<../README.md>)**
