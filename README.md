@@ -92,9 +92,8 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
   
 * 🔗 **For full SQL query code & database screenshots:**
  <br>
-   <br>
-    <br>
-  👉 **[Click here to view SQL Analysis README](<./SQL_Enterprise Financial & Prfitability Analysis FILE/README.md>)**
+ 
+  👉 **[Click here to view SQL Analysis README](<./SQL_Enterprise Financial & Profitability Analysis FILE/README.md>)**
 
 ---
 
@@ -178,8 +177,8 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
  │ │  ├── 📊 Enterprise Financial & Profitability Analysis Dashboard.pbix 
  │    └── 📄 README.md                      <-- Power BI Sub-README
 
- ├── 📁 3-SQL_Enterprise Financial & Prfitability Analysis FILE/
- │    ├── 📄 Enterprise Financial & Prfitability Analysis.sql
+ ├── 📁 3-SQL_Enterprise Financial & Profitability Analysis FILE/
+ │    ├── 📄 Enterprise Financial & Profitability Analysis.sql
  │    └── 📄 README.md                      <-- SQL Sub-README
  │    └── 📄 budget_data.csv                   <-- Csv files(Synthetic Data)
       └── 📄 customer_data.csv                      
