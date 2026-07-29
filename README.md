@@ -188,3 +188,9 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
  │
  ├── 📄 Raw_data_sales_&_expense.xlsx       <-- Raw Excel file(Synthetic Data)
  ```
+## 📊 Data Source & Type
+
+* **Data Source:** AI-Generated Data (Synthetic Data). This means the data is not real; it was created by AI for practice and analysis. It does not contain any real company or personal information.
+* **Data Type:** Excel File (.xlsx) / CSV.
+
+ 👉 **[Click here to download Raw_data_sales_&_expense file ](<./Raw_data_sales_&_expense.xlsx>)**
