@@ -66,7 +66,7 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
 <table>
   <tr>
  <td><img width="286" height="300" alt="pgAdmin4_ic7mdsales create" src="https://github.com/user-attachments/assets/7751f0d2-2740-43fa-bf2c-b01e835dc506" /></td>
- <td><img width="960" height="540" alt="pgAdmin4_FFCEpYhl3o" src="https://github.com/user-attachments/assets/ce901d19-79bd-4114-835e-d75f362c5668" /></td>
+ <td><img width="925" height="473" alt="pgAdmin4_FFCEpYhl3o" src="https://github.com/user-attachments/assets/7a9c8a72-dcda-4da3-97e4-01c78ba01ba2" /></td>
  <td><img width="282" height="242" alt="pgAdmin4_ customer" src="https://github.com/user-attachments/assets/c237c217-fa49-4c73-a268-cac9d9a1e55a" /></td>
   </tr>
 </table>
