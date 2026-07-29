@@ -91,9 +91,10 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
  <br>
   
 * 🔗 **For full SQL query code & database screenshots:**
-
-  
-  👉 **[Click here to view SQL Analysis README](./2-SQL-Analysis/README.md)**
+ <br>
+   <br>
+    <br>
+  👉 **[Click here to view SQL Analysis README](<./SQL_Enterprise Financial & Prfitability Analysis FILE/README.md>)**
 
 ---
 
@@ -148,13 +149,17 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
 </table>
  <br>
   
-* 🔗 **For full Power BI dashboard layout & DAX measures:**  
-  👉 **[Click here to view Power BI README](./3-PowerBI-Dashboard/README.md)**
+* 🔗 **For full Power BI dashboard layout & DAX measures:**
+   <br>
+   <br>
+    <br>
+    
+  👉 **[Click here to view Power BI README](<./POWER BI Enterprise Financial & Profitability Analysis Dashboard/README.md>)**
 
 ---
 
 ## 🛠️ Tech Stack & Tools
-* **Excel:** Power pivot report & Dashboard
+* **Excel:** Power pivot report(Star Schema Data Modeling) & Dashboard
 * **PostgreSQL (pgAdmin 4):** Relational Schema, DDL, DML, CTEs, Views, Window Functions (`RANK`, `LAG`)
 * **Power BI & Power Query:** M-Code Date Table, Star Schema Data Modeling, DAX, Field Parameters, What-If Parameters
 
@@ -163,18 +168,20 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
 ## 📁 Repository Directory Structure
 
 ```text
-📁 Enterprise-Financial-Analysis/
+📁 Enterprise-Financial-Profitability-Analysis-Project/
  │
- ├── 📁 1-Excel-Analysis/
- │    ├── 📄 Financial_Data_Cleaned.xlsx
+ ├── 📁 1-Excel_Regional Sales & Expense Performance Analysis/
+ │    ├── 📄 Excel_Regional Sales & Expense Performance Analysis.xlsm
  │    └── 📄 README.md                      <-- Excel Sub-README
  │
- ├── 📁 2-SQL-Analysis/
- │    ├── 📄 Enterprise_Financial_Queries.sql
+ ├── 📁 2-POWER BI Enterprise Financial & Profitability Analysis Dashboard/
+ │ │  ├── 📊 Enterprise Financial & Profitability Analysis Dashboard.pbix 
+ │    └── 📄 README.md                      <-- Power BI Sub-README
+
+ ├── 📁 3-SQL_Enterprise Financial & Prfitability Analysis FILE/
+ │    ├── 📄 Enterprise Financial & Prfitability Analysis.sql
  │    └── 📄 README.md                      <-- SQL Sub-README
  │
- ├── 📁 3-PowerBI-Dashboard/
- │    ├── 📊 Financial_Profitability_Dashboard.pbix
- │    └── 📄 README.md                      <-- Power BI Sub-README
+ └── 📄 README.md                            <-- Main Repository README (This File)  
  │
- └── 📄 README.md                            <-- Main Repository README (This File)
+ ├── 📄 Raw_data_sales_&_expense.xlsx
