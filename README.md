@@ -181,7 +181,11 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
  ├── 📁 3-SQL_Enterprise Financial & Prfitability Analysis FILE/
  │    ├── 📄 Enterprise Financial & Prfitability Analysis.sql
  │    └── 📄 README.md                      <-- SQL Sub-README
+ │    └── 📄 budget_data.csv                   <-- Csv files(Synthetic Data)
+      └── 📄 customer_data.csv                      
+ │    └── 📄 expense_data.csv                     
+ │    └── 📄 sales_data.csv  
+ └── 📄 README.md                           <-- Main Repository README (This File)  
  │
- └── 📄 README.md                            <-- Main Repository README (This File)  
- │
- ├── 📄 Raw_data_sales_&_expense.xlsx
+ ├── 📄 Raw_data_sales_&_expense.xlsx       <-- Raw Excel file(Synthetic Data)
+ ```
