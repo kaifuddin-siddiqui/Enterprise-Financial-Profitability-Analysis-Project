@@ -213,3 +213,6 @@ SQL
 <br>
 <br>
 **4) Target Tracking: Budget variance queries pinpointed regions that missed quarterly target goals, allowing operations to       reallocate marketing spending.**
+<br>
+<br>
+👉 **[Click here to view main README](<../README.md>)**
