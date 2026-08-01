@@ -50,6 +50,11 @@ This repository contains a complete, **Enterprise Financial & Profitability Anal
 </table>
 <br>
 
+* ## **This  synthetic Enterprise Sales & Expense Data Correction Using Vlookup Function.** 
+**This dataset contained a one minor errors, such as mismatches between cities and their assigned regions (East and West). By implementing VLOOKUP function, I systematically verified and cross-referenced the geographical data, correcting the mismatches to deliver a clean dataset.**
+
+---
+
 * 🔗 **For full details & step-by-step documentation:**
   
   👉 **[Click here to view Excel README](<./Excel_Regional Sales & Expense Performance Analysis/README.md>)**
