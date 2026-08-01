@@ -28,7 +28,7 @@ Raw Synthetic Data ➡️ Power Query (ETL & M-Code) ➡️ Power Pivot (Star Sc
 <br>
 <br>
 
-## **This  synthetic Enterprise Sales & Expense Data Correction Using Vlookup Function.** 
+* ## **This  synthetic Enterprise Sales & Expense Data Correction Using Vlookup Function.** 
 **This dataset contained a one minor errors, such as mismatches between cities and their assigned regions (East and West). By implementing VLOOKUP function, I systematically verified and cross-referenced the geographical data, correcting the mismatches to deliver a clean dataset.**
 
 ---
